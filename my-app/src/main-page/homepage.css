@@ -8,6 +8,10 @@
   color: coral;
 }
 
+.header {
+  background-color: rgb(187, 208, 236);
+}
+
 .featuredHouse {
   border-radius: 2px;
   background-color: rgb(255, 190, 166);

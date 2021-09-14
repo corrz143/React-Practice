@@ -1,7 +1,7 @@
 import logo from "./GloboLogo.png";
 
 const Header = ({ subtitle, title }) => (
-    <header className="row">
+    <header className="row header">
         <div className="col-md-5">
             <img src={logo} className="logo" alt="logo" />
         </div>
