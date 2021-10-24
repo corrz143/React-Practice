@@ -1,0 +1,17 @@
+.logo {
+  height: 150px;
+}
+
+.header,
+.footer {
+  background-color: rgb(187, 208, 236);
+}
+
+.navbar {
+  font-size: large;
+}
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
