@@ -1,0 +1,47 @@
+import React from "react";
+import { MenuList } from "../data/MenuList";
+import MenuItem from "../components/MenuItem";
+// import { selectMenu } from "../redux/menuSlice";
+import "../styles/Menu.css";
+// import { selectMenu } from "../redux/menuSlice";
+// import { useSelector } from "react-redux";
+// console.log(selectMenu);
+
+export const Menu = () => {
+  // const selectMenu = (state) => state.menus.menus;
+
+  return (
+    <div className="menu">
+      <h1 className="menuTitle">Our Menu</h1>
+      <div className="menuList">
+        {MenuList &&
+          MenuList.map((menuItem, key) => {
+            return (
+              <MenuItem
+                key={key}
+                menuItem={menuItem}
+
+                // image={menuItem.image}
+                // name={menuItem.name}
+                // description={menuItem.description}
+                // price={menuItem.price}
+              />
+            );
+          })}
+        {/* {MenuList.map((menuItem, key) => {
+          return (
+            <MenuItem
+              key={key}
+              image={menuItem.image}
+              name={menuItem.name}
+              description={menuItem.description}
+              price={menuItem.price} 
+        //    />
+        //   );
+        // })}*/}
+      </div>
+    </div>
+  );
+};
+
+export default Menu;

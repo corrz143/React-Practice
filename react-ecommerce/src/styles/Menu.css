@@ -1,0 +1,126 @@
+.menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menu .menuTitle {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.menuList {
+  width: 70vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  justify-content: space-around;
+}
+
+/* MENU ITEM STYLING */
+
+.menuItem {
+  border-radius: 15px;
+  width: 400px;
+  height: 350px;
+  margin: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.menuItem:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.menuItem div {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menuItem img {
+  width: 400px;
+  height: 200px;
+}
+
+.menuItem h2,
+.menuItem h5 {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.menuItem button {
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: #121619;
+  height: 40px;
+  width: 150px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+/* QUANTITY BUTTON */
+div.quantity {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-width: 160px;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  align-items: center;
+  padding: 0;
+  border: 1px solid #222;
+  border-radius: 40px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.addCart {
+  display: flex;
+  /* flex-direction: ; */
+}
+
+.quantity span {
+  font-size: 18px;
+  /* margin: 15px; */
+}
+
+.quantity button {
+  top: 0;
+  width: 25px;
+  height: 35px;
+  /* background-color: #ffffff; */
+  color: #222;
+  line-height: 35px;
+  font-size: 18px;
+  border: none;
+  background: 0 0;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .menuList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .menuList {
+    grid-template-columns: 1fr;
+  }
+}

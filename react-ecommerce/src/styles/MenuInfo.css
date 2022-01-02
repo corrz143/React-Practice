@@ -1,0 +1,18 @@
+.menuInfo {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+
+.menuLeft {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.menuRight {
+  flex: 1;
+  position: relative;
+}
