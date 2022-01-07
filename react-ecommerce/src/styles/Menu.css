@@ -51,7 +51,7 @@
   height: 200px;
 }
 
-.menuItem h2,
+.menuItem h3,
 .menuItem h5 {
   margin-left: 20px;
   margin-top: 10px;
@@ -75,7 +75,7 @@
 
 /* QUANTITY BUTTON */
 div.quantity {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
   min-width: 160px;
   width: 150px;
   height: 35px;
@@ -102,7 +102,7 @@ div.quantity {
   top: 0;
   width: 25px;
   height: 35px;
-  /* background-color: #ffffff; */
+  /* background-color: #c52626; */
   color: #222;
   line-height: 35px;
   font-size: 18px;
@@ -112,6 +112,10 @@ div.quantity {
   cursor: pointer;
   margin-right: 15px;
 }
+
+/* .subButton {
+  border: none;
+} */
 
 @media only screen and (max-width: 1300px) {
   .menuList {

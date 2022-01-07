@@ -5,8 +5,8 @@ import "../styles/Filter.css";
 const Filters = () => {
   return (
     <div className="filter">
-      {["PIZZA", "SALAD", "SIDES"].map((category) => (
-        <Filter category={category} isActive={false} />
+      {["PIZZA", "SALAD", "SIDES", "ALL"].map((category) => (
+        <Filter category={category} />
       ))}
     </div>
   );

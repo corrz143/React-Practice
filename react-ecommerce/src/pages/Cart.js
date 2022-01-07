@@ -1,33 +1,53 @@
 import React from "react";
 import CartItem from "../components/CartItem";
-
-const cartItems = [
-  {
-    id: 1,
-    name: "Pepperoni Pizza",
-    quantity: 2,
-    price: 15.99,
-  },
-  {
-    id: 2,
-    name: "Cheezy Pizza",
-    quantity: 2,
-    price: 15.99,
-  },
-];
+import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import "../styles/Cart.css";
+import { useSelector } from "react-redux";
+import { getCartItems, getTotalPrice } from "../redux/cartSlice";
 
 const Cart = () => {
+  const cartItems = useSelector(getCartItems);
+  const subTotalPrice = useSelector(getTotalPrice);
+
   return (
-    <div className="cart">
-      <h1>Cart</h1>
-      <div>Image</div>
-      <div>
-        <h5>Total:</h5>
-        <span>$100</span>
+    <div className="container cart">
+      <div className="text-center">
+        <h1>
+          <ShoppingCartOutlinedIcon
+            className="cartIcon mr-2s"
+            fontSize="large"
+          />
+          Cart
+        </h1>
       </div>
-      {cartItems.map((cartItem) => (
-        <CartItem cartItem={cartItem} />
-      ))}
+      <div className="cartRow row">
+        <p className="col">Item</p>
+        <p className="col">Quantity</p>
+        <p className="col">Subtotal</p>
+      </div>
+      <div className="cartItem">
+        {cartItems &&
+          cartItems.map((cartItem, key) => (
+            <CartItem key={key} cartItem={cartItem} />
+          ))}
+      </div>
+      <div className="justify-content-end">
+        <hr className="" />
+        <div className="row subTotal ">
+          <p className="col">Subtotal</p>
+          <span className="col">${subTotalPrice}</span>
+        </div>
+        <div className="row subTotal">
+          <p className="col">Tax</p>
+          <span className="col">${(subTotalPrice * 0.12).toFixed(2)}</span>
+        </div>
+        <div className="row subTotal">
+          <p className="col">Total</p>
+          <span className="col">
+            ${(subTotalPrice * 0.12 + subTotalPrice).toFixed(2)}
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
